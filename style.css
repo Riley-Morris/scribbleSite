@@ -1,0 +1,15 @@
+#mainBox{
+    display: flex;
+    flex-direction: column;
+}
+.rowBox{
+    display: flex;
+    border: 1px solid black;
+    background-color: red;
+    min-height: 20px;
+    min-width: 20px;
+}
+
+.innerBox{
+
+}
