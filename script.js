@@ -5,6 +5,12 @@ function genGrid(size){
          rowBox.classList.add('rowBox')
          mainBox.appendChild(rowBox)
          console.log(i)
+         for (let i=0; i<=Math.sqrt(size); i++){
+            console.log(i + 10)
+            const innerBox = document.createElement('div');
+            innerBox.classList.add('innerBox');
+            rowBox.appendChild(innerBox);
+         }
     }
 }
-genGrid(36)
+genGrid(100)
