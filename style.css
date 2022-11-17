@@ -1,6 +1,17 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    display: flex;
+    flex: 1;
+}
 #mainBox{
     display: flex;
     flex-direction: column;
+    width: 50%;
+    height: 80%;
+
 }
 .rowBox{
     display: flex;
@@ -8,11 +19,11 @@
     background-color: red;
     min-height: 20px;
     min-width: 20px;
+    
 }
 
 .innerBox{     
-    min-width: 10px;
-    min-height: 10px;
+    
     border: 1px solid black;
     display: flex;
     flex: 1;
