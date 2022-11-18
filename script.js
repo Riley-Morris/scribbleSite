@@ -13,15 +13,15 @@ function genGrid(size){
             innerBox.classList.add('innerBox');
             innerBox.style.height = '100%';
             innerBox.style.width = boxLength;
-            innerBox.addEventListener('mousedown', clickHandler)
+            innerBox.addEventListener('pointerdown', clickHandler)
             rowBox.appendChild(innerBox);
          }
     }
 }
+
 function clickHandler(e){
-    let mouseDown = 0;
-    const box = e.target;
-    e.target.style.backgroundColor = 'black'
+    currentTarget = e.target 
+    currentTarget.style.backgroundColor = 'black'
     
 }
 genGrid(1000)
