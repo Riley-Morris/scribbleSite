@@ -1,4 +1,4 @@
-function genGrid(size, color){
+function genGrid(size){
     const mainBox = document.querySelector('#mainBox');
     const boxLength = ((1/Math.sqrt(size)) * 100).toString() + '%'
     for (let i = 0; i <= Math.sqrt(size); i++){
@@ -13,11 +13,15 @@ function genGrid(size, color){
             innerBox.classList.add('innerBox');
             innerBox.style.height = '100%';
             innerBox.style.width = boxLength;
-            innerBox.addEventListener('mousedown', () => {
-                innerBox.style.backgroundColor = color
-            })
+            innerBox.addEventListener('mousedown', clickHandler)
             rowBox.appendChild(innerBox);
          }
     }
 }
-genGrid(1000, 'black')
+function clickHandler(e){
+    let mouseDown = 0;
+    const box = e.target;
+    e.target.style.backgroundColor = 'black'
+    
+}
+genGrid(1000)
