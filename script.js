@@ -1,3 +1,6 @@
+
+let mouseDown = false;
+
 function genGrid(size){
     const mainBox = document.querySelector('#mainBox');
     const boxLength = ((1/Math.sqrt(size)) * 100).toString() + '%'
@@ -13,15 +16,27 @@ function genGrid(size){
             innerBox.classList.add('innerBox');
             innerBox.style.height = '100%';
             innerBox.style.width = boxLength;
-            innerBox.addEventListener('pointerdown', clickHandler)
+            innerBox.addEventListener('mouseover', paintLines)
             rowBox.appendChild(innerBox);
          }
     }
 }
 
-function clickHandler(e){
-    currentTarget = e.target 
-    currentTarget.style.backgroundColor = 'black'
+
+
+function paintLines(e){
     
+    document.body.onmousedown = function(){
+        mouseDown = true
+    };
+    document.body.onmouseup = function() {
+        mouseDown = false
+    };
+    console.log('right here')
+    if (mouseDown === true) {
+        console.log('mousedown')
+        e.target.style.backgroundColor = colorChoice
+    }
 }
-genGrid(1000)
+let colorChoice = 'black'      
+genGrid(36)
