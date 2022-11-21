@@ -25,16 +25,13 @@ function genGrid(size){
 
 
 function paintLines(e){
-    
     document.body.onmousedown = function(){
         mouseDown = true
     };
     document.body.onmouseup = function() {
         mouseDown = false
     };
-    console.log('right here')
-    if (mouseDown === true) {
-        console.log('mousedown')
+    if (mouseDown === true) { 
         e.target.style.backgroundColor = colorChoice
     }
 }

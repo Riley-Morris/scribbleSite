@@ -1,6 +1,7 @@
 
 html, body{
-    height: 100%;
+    box-sizing: border-box;
+    height: 100vh;
     display: flex;
     flex: 1;
 }
@@ -9,6 +10,7 @@ html, body{
     flex-direction: column;
     height: 500px;
     width: 500px;
+    
 }
 
      
@@ -30,4 +32,11 @@ html, body{
  
     display: flex;
     flex: 1;
+}
+#optionsBoxOne{
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    width: 100px;
+    
 }
