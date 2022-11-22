@@ -6,6 +6,7 @@ html, body{
 
 body{
     background-color: rgb(5, 50, 102);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 #mainMainBox{
     display: flex;
@@ -30,8 +31,7 @@ body{
     flex-direction: column;
     height: 500px;
     width: 500px;
-    flex: none;
-    
+    flex: none; 
 }
 
 #optionBoxOne{
@@ -40,10 +40,10 @@ body{
     height: 500px;
     width: 120px;
     align-self: center;  
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: rgb(219, 170, 35);
     justify-content: space-between;
     font-size: 1.3em;
+    
 }
 
 img{
@@ -83,7 +83,9 @@ img{
     justify-content: flex-end;
     
 }
-
-h5{
-    text-align: end;
+h1{
+    text-align: center;
+    color:rgb(255, 187, 0);
+    position: relative;
+    left: 72px;
 }
