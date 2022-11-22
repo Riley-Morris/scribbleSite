@@ -24,7 +24,7 @@ body{
 #bottomContainer{
     height: 100px;
     width: 625px;
-    border: 2px solid black;
+   
 }
 
 #mainBox{
@@ -96,4 +96,18 @@ h1{
 .colorSpan{
     margin-right: 5px;
     margin-top: 5px;
+}
+.gridRadioButtons{
+    display: inline-flex;
+    margin: 5px;
+    color: rgb(219, 170, 35);
+    font-size: 1.1em;
+    
+}
+#gridRadioBox{
+    text-align: center;
+}
+h3{
+    margin: 0px;
+    color: rgb(62, 192, 243);
 }
