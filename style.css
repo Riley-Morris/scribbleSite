@@ -1,19 +1,33 @@
 
 html, body{
     box-sizing: border-box;
-    height: 100vh;
-    display: flex;
+    height: 100vh;  
+}
+#mainMainBox{
+    display: flex;          
     flex: 1;
+    
+    
 }
 #mainBox{
     display: flex;
     flex-direction: column;
-    height: 500px;
-    width: 500px;
+    height: 50px;
+    width: 50px;
+    flex: none;
     
 }
 
-     
+#optionBoxOne{
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    width: 100px;
+    
+    align-self: center;
+    
+}
+  
 
 
 
@@ -23,20 +37,11 @@ html, body{
     border-width: 0;
     border: 0;
     background-color: rgb(209, 206, 206);
-    min-height: 20px;
-    min-width: 20px;
+    
     
 }
 
 .innerBox{     
- 
     display: flex;
     flex: 1;
-}
-#optionsBoxOne{
-    display: flex;
-    flex-direction: column;
-    height: 500px;
-    width: 100px;
-    
 }
