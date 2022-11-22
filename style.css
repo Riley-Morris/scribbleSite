@@ -33,6 +33,7 @@ body{
     height: 500px;
     width: 500px;
     flex: none; 
+    border: 7px solid black;
 }
 
 #optionBoxOne{
@@ -44,7 +45,7 @@ body{
     color: rgb(219, 170, 35);
     justify-content: space-between;
     font-size: 1.3em;
-    border: 2px solid rgb(177, 126, 16);
+    /* border: 2px solid rgb(177, 126, 16); */
     
 }
 
@@ -74,7 +75,7 @@ img{
 }
 
 .labelItem{
-    opacity: 0.7; 
+    opacity: 0.3; 
 }
 
 .buttonRadio:checked + label{
@@ -84,11 +85,15 @@ img{
 .buttonBox{
     display: flex;
     justify-content: flex-end;
-    
+    text-align: left;
 }
 h1{
     text-align: center;
     color:rgb(255, 187, 0);
     position: relative;
     left: 72px;
+}
+.colorSpan{
+    margin-right: 5px;
+    margin-top: 5px;
 }

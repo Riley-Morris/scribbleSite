@@ -36,7 +36,7 @@ function paintLines(e){
         e.target.style.backgroundColor = colorChoice
     }
 }
-let colorChoice = 'black' 
+let colorChoice = 'red' 
 
 // update colorChoice variable to feed into paintLines & mouse listener
 function radioListener(){
