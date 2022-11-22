@@ -32,14 +32,14 @@ function paintLines(e){
         mouseDown = false
     };
     if (mouseDown === true) { 
-        radioListener()
+        colorRadioListener()
         e.target.style.backgroundColor = colorChoice
     }
 }
 let colorChoice = 'red' 
 
 // update colorChoice variable to feed into paintLines & mouse listener
-function radioListener(){
+function colorRadioListener(){
     const radioButtons = document.querySelectorAll('input[name="color"]');
     for (const radioButton of radioButtons) {
         if(radioButton.checked){
@@ -47,4 +47,20 @@ function radioListener(){
         }
     }
 }   
-genGrid(1000)
+function refreshGrid(){
+    const gridBox = document.querySelectorAll('.rowBox')
+    for (row of gridBox) {
+        row.remove()
+    }   
+}
+function gridRadioListener(){
+    const radioButtons = document.querySelectorAll('input[name="gridSize"')
+    for (const radioButton of radioButtons) {
+        if(radioButton.checked){
+            refreshGrid();
+            genGrid(radioButton.value)
+        }
+    }
+}
+
+gridRadioListener()

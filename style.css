@@ -101,7 +101,7 @@ h1{
     display: inline-flex;
     margin: 5px;
     color: rgb(219, 170, 35);
-    font-size: 1.1em;
+    font-size: 1.19em;
     
 }
 #gridRadioBox{
@@ -109,5 +109,6 @@ h1{
 }
 h3{
     margin: 0px;
+    margin-top: 5px;
     color: rgb(62, 192, 243);
 }
