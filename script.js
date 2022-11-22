@@ -47,4 +47,4 @@ function radioListener(){
         }
     }
 }   
-genGrid(100)
+genGrid(1000)

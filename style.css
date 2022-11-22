@@ -5,21 +5,23 @@ html, body{
 }
 
 body{
-    background-color: rgb(3, 22, 44);
+    background-color: rgb(5, 50, 102);
 }
 #mainMainBox{
     display: flex;
     flex-direction: column;
     align-items: center;
+
 }
 
 #topContainer{
     display: flex;          
     flex: 1;
+    gap: 5px;
 }
 #bottomContainer{
     height: 100px;
-    width: 600px;
+    width: 625px;
     background-color: red;
 }
 
@@ -36,9 +38,12 @@ body{
     display: flex;
     flex-direction: column;
     height: 500px;
-    width: 100px;
+    width: 120px;
     align-self: center;  
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: rgb(219, 170, 35);
+    justify-content: space-between;
+    font-size: 1.3em;
 }
 
 img{
@@ -52,9 +57,7 @@ img{
     border: none;
     border-width: 0;
     border: 0;
-    background-color: rgb(209, 206, 206);
-    
-    
+    background-color: rgb(255, 255, 255);
 }
 
 .innerBox{     
@@ -68,6 +71,7 @@ img{
 
 .labelItem{
     opacity: 0.7;
+    
 }
 
 .buttonRadio:checked + label{
@@ -77,4 +81,9 @@ img{
 .buttonBox{
     display: flex;
     justify-content: flex-end;
+    
+}
+
+h5{
+    text-align: end;
 }
