@@ -32,8 +32,19 @@ function paintLines(e){
         mouseDown = false
     };
     if (mouseDown === true) { 
+        radioListener()
         e.target.style.backgroundColor = colorChoice
     }
 }
-let colorChoice = 'black'      
-genGrid(36)
+let colorChoice = 'black' 
+
+// update colorChoice variable to feed into paintLines & mouse listener
+function radioListener(){
+    const radioButtons = document.querySelectorAll('input[name="color"]');
+    for (const radioButton of radioButtons) {
+        if(radioButton.checked){
+            colorChoice = radioButton.value;
+        }
+    }
+}   
+genGrid(100)
