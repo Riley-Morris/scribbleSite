@@ -17,7 +17,7 @@ body{
 #topContainer{
     display: flex;          
     flex: 1;
-    gap: 5px;
+    gap: 10px;
 }
 #bottomContainer{
     height: 100px;
@@ -43,7 +43,8 @@ body{
     color: #39FF14;
     justify-content: space-between;
     font-size: 1.3em;
-    /* border: 2px solid rgb(177, 126, 16); */
+    text-shadow: 0 0 5px #fff,
+                 0 0 7px #39FF14;
     
 }
 
@@ -129,4 +130,42 @@ h3{
         0 0 92px #0fa,
         0 0 102px #0fa,
         0 0 151px #0fa;
+}
+
+#whitef{
+    color: white;
+    text-shadow: 0 0 5px #fff,
+                 0 0 10px rgb(255, 255, 255);
+}
+#blackf{
+    color: black;
+    text-shadow: 0 0 5px #fff,
+                 0 0 10px rgb(255, 255, 255);
+}
+
+#redf{
+    color: red;
+    text-shadow: 0 0 3px #fff,
+                 0 0 10px red;
+}
+
+#bluef{
+    color: blue;
+    text-shadow: 0 0 2px rgb(165, 174, 199),
+                 0 0 10px blue;
+}
+#yellowf{
+    color: yellow;
+    text-shadow: 0 0 5px #fff,
+                 0 0 10px yellow;
+}
+#purplef{
+    color: rgb(155, 63, 155);
+    text-shadow: 0 0 2px #fff,
+                 0 0 10px rgb(211, 54, 211);
+}
+#orangef{
+    color: orange;
+    text-shadow: 0 0 5px #fff,
+                 0 0 10px rgb(240, 175, 54);
 }
