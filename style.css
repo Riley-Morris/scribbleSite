@@ -169,3 +169,10 @@ h3{
     text-shadow: 0 0 5px #fff,
                  0 0 10px rgb(240, 175, 54);
 }
+#footer{
+    color: #39FF14;
+    position: fixed;
+    left: 50%;
+    margin-left: -20px;
+    bottom: 0;
+}
