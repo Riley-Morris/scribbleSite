@@ -12,8 +12,6 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    
-
 }
 
 #topContainer{
@@ -88,11 +86,12 @@ img{
     text-align: left;
 }
 h1{
+    font-size: 40px;
     font-weight: 500;
     text-align: center;
-    color:#39FF14;
     position: relative;
     left: 72px;
+    
 }
 .colorSpan{
     margin-right: 5px;
@@ -109,7 +108,7 @@ h1{
     text-align: center;
 }
 input[type='radio'] { 
-    transform: scale(1.5); 
+    transform: scale(1.4); 
 }
 h3{
     font-weight: 200;
@@ -118,3 +117,16 @@ h3{
     color: rgb(62, 192, 243);
 }
 
+.neon{
+    
+    color: #fff;
+    text-shadow:
+        0 0 11px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px #0fa,
+        0 0 82px #0fa,
+        0 0 92px #0fa,
+        0 0 102px #0fa,
+        0 0 151px #0fa;
+}
