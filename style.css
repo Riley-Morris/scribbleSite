@@ -21,15 +21,15 @@ body{
 }
 #bottomContainer{
     height: 100px;
-    width: 625px;
+    width: 525px;
    
 }
 
 #mainBox{
     display: flex;
     flex-direction: column;
-    height: 500px;
-    width: 500px;
+    height: 400px;
+    width: 400px;
     flex: none; 
     /* border: 7px solid rgb(194, 131, 36); */
 }
@@ -37,12 +37,12 @@ body{
 #optionBoxOne{
     display: flex;
     flex-direction: column;
-    height: 500px;
-    width: 120px;
+    height: 400px;
+    width: 100px;
     align-self: center;  
     color: #39FF14;
     justify-content: space-between;
-    font-size: 1.3em;
+    font-size: 1.2em;
     text-shadow: 0 0 5px #fff,
                  0 0 7px #39FF14;
     
@@ -102,7 +102,7 @@ h1{
     display: inline-flex;
     margin: 5px;
     color: rgb(219, 170, 35);
-    font-size: 1.19em;
+    font-size: 0.9em;
     
 }
 #gridRadioBox{
@@ -164,7 +164,7 @@ h3{
     text-shadow: 0 0 2px #fff,
                  0 0 10px rgb(211, 54, 211);
 }
-#orangef{
+#orangef{2
     color: orange;
     text-shadow: 0 0 5px #fff,
                  0 0 10px rgb(240, 175, 54);

@@ -1,7 +1,11 @@
 
 let mouseDown = false;
+let gridLinesOption
+let gridSizeCurrent 
 
 function genGrid(size){
+    // getGridLines()
+    const gridLineButtons = document.querySelectorAll('input[name="gridLines"]');
     const mainBox = document.querySelector('#mainBox');
     const boxLength = ((1/Math.sqrt(size)) * 100).toString() + '%'
     for (let i = 0; i <= Math.sqrt(size); i++){
@@ -16,9 +20,12 @@ function genGrid(size){
             innerBox.classList.add('innerBox');
             innerBox.style.height = '100%';
             innerBox.style.width = boxLength;
+            innerBox.style.border = 'gridLinesOption'
+            console.log(gridLinesOption)
             innerBox.addEventListener('mouseover', paintLines)
             rowBox.appendChild(innerBox);
          }
+        
     }
 }
 
@@ -51,16 +58,30 @@ function refreshGrid(){
     const gridBox = document.querySelectorAll('.rowBox')
     for (row of gridBox) {
         row.remove()
-    }   
+    }   genGrid(gridSizeCurrent)
+    
 }
 function gridRadioListener(){
-    const radioButtons = document.querySelectorAll('input[name="gridSize"')
+    const radioButtons = document.querySelectorAll('input[name="gridSize"]')
     for (const radioButton of radioButtons) {
         if(radioButton.checked){
-            refreshGrid();
-            genGrid(radioButton.value)
+            gridSizeCurrent = radioButton.value
+            refreshGrid();  
+            
         }
     }
 }
+// check radio buttons if grid line option is enabled
+// function getGridLines(){
+//     for (button of gridLineButtons){
+//         if (button.checked){
+//             if (button.value === 'yes'){
+//             gridLinesOption = '1px solid black'
+//             }else {
+//             gridLinesOption = 'none'
+//             }
+//         }
+//     }
+// }
 
 gridRadioListener()
