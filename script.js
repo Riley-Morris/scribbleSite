@@ -1,11 +1,13 @@
 
 let mouseDown = false;
-let gridLinesOption
+let gridLinesOption = '1px solid black'
 let gridSizeCurrent 
+let colorChoice = 'red' 
 
+
+//main function to generate grid, takes size as arg 
+//should output equal squares for the grid
 function genGrid(size){
-    // getGridLines()
-    const gridLineButtons = document.querySelectorAll('input[name="gridLines"]');
     const mainBox = document.querySelector('#mainBox');
     const boxLength = ((1/Math.sqrt(size)) * 100).toString() + '%'
     for (let i = 0; i <= Math.sqrt(size); i++){
@@ -20,8 +22,7 @@ function genGrid(size){
             innerBox.classList.add('innerBox');
             innerBox.style.height = '100%';
             innerBox.style.width = boxLength;
-            innerBox.style.border = 'gridLinesOption'
-            console.log(gridLinesOption)
+            innerBox.style.border = gridLinesOption
             innerBox.addEventListener('mouseover', paintLines)
             rowBox.appendChild(innerBox);
          }
@@ -30,7 +31,8 @@ function genGrid(size){
 }
 
 
-
+//function that actually changes grid colors, operates by flipping a value
+//depending on if mouse is down or not
 function paintLines(e){
     document.body.onmousedown = function(){
         mouseDown = true
@@ -43,7 +45,7 @@ function paintLines(e){
         e.target.style.backgroundColor = colorChoice
     }
 }
-let colorChoice = 'red' 
+
 
 // update colorChoice variable to feed into paintLines & mouse listener
 function colorRadioListener(){
@@ -54,6 +56,8 @@ function colorRadioListener(){
         }
     }
 }   
+//removes all the grid's rows, and regenerates a new grid by
+//calling the genGrid function
 function refreshGrid(){
     const gridBox = document.querySelectorAll('.rowBox')
     for (row of gridBox) {
@@ -61,6 +65,8 @@ function refreshGrid(){
     }   genGrid(gridSizeCurrent)
     
 }
+//selects color radio butts, finds which is checked & sets the variable
+//gridSizeCurrent to its value, then passes refreshgrid()
 function gridRadioListener(){
     const radioButtons = document.querySelectorAll('input[name="gridSize"]')
     for (const radioButton of radioButtons) {
@@ -72,16 +78,15 @@ function gridRadioListener(){
     }
 }
 // check radio buttons if grid line option is enabled
-// function getGridLines(){
-//     for (button of gridLineButtons){
-//         if (button.checked){
-//             if (button.value === 'yes'){
-//             gridLinesOption = '1px solid black'
-//             }else {
-//             gridLinesOption = 'none'
-//             }
-//         }
-//     }
-// }
+function getGridLines(e){
+    const radioButtons = document.querySelectorAll('input[name="gridLines"]');
+    for (radioButton of radioButtons){
+        if (radioButton.checked){
+            console.log(radioButton.value);
+            gridLinesOption = radioButton.value;
+        }
+    }
+    refreshGrid()
+}
 
 gridRadioListener()
