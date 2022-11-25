@@ -118,6 +118,7 @@ h3{
     color: rgb(62, 192, 243);
 }
 
+
 .neon{
     
     color: #fff;
@@ -164,8 +165,8 @@ h3{
     text-shadow: 0 0 2px #fff,
                  0 0 10px rgb(211, 54, 211);
 }
-#orangef{2
-    color: orange;
+#orangef{
+    color: rgb(255, 178, 34);
     text-shadow: 0 0 5px #fff,
                  0 0 10px rgb(240, 175, 54);
 }
