@@ -3,6 +3,7 @@ let mouseDown = false;
 let gridLinesOption = '1px solid black'
 let gridSizeCurrent 
 let colorChoice = 'red' 
+let colorToggle = false
 
 
 //main function to generate grid, takes size as arg 
@@ -40,9 +41,16 @@ function paintLines(e){
     document.body.onmouseup = function() {
         mouseDown = false
     };
-    if (mouseDown === true) { 
+    if (colorToggle === true){
+        if (mouseDown === true){
+            console.log('true test')
+            e.target.style.backgroundColor = randomRGB()
+        }
+    }else{
+        if (mouseDown === true) { 
         colorRadioListener()
         e.target.style.backgroundColor = colorChoice
+        }
     }
 }
 
@@ -87,6 +95,18 @@ function getGridLines(e){
         }
     }
     refreshGrid()
+}
+//generate rgb string//
+function toggleSwitch(){
+    colorToggle = !colorToggle
+}
+
+function randomRGB(){
+    let red = Math.floor(Math.random() * 255)
+    let green = Math.floor(Math.random() * 255)
+    let blue = Math.floor(Math.random() * 255)
+    console.log(colorToggle)
+    return `rgb(${red.toString()},${green.toString()},${blue.toString()})`
 }
 
 gridRadioListener()
