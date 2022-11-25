@@ -43,7 +43,6 @@ function paintLines(e){
     };
     if (colorToggle === true){
         if (mouseDown === true){
-            console.log('true test')
             e.target.style.backgroundColor = randomRGB()
         }
     }else{
@@ -96,16 +95,15 @@ function getGridLines(e){
     }
     refreshGrid()
 }
-//generate rgb string//
+
 function toggleSwitch(){
     colorToggle = !colorToggle
 }
-
+//generate rgb string//
 function randomRGB(){
     let red = Math.floor(Math.random() * 255)
     let green = Math.floor(Math.random() * 255)
     let blue = Math.floor(Math.random() * 255)
-    console.log(colorToggle)
     return `rgb(${red.toString()},${green.toString()},${blue.toString()})`
 }
 
