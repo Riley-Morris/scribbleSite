@@ -90,16 +90,27 @@
                 </div>
             </div>
             <div id= 'gridLineContainer'>
-                <h3>Include Grid Lines?</h3>
-                <div class ='gridRadioButtons'>
-                    <span class = 'gridLines'>Yes </span>
-                    <input type="radio" name = 'gridLines' value = '1px solid black' class = 'gridLines' id = 'yes' onclick="getGridLines();" checked="checked">
-                    <label class = 'labelItemLines'  for = 'true'></label>
+                <div id = 'lineBox'>
+                    <h3 id="gridh3">Include Grid Lines?</h3>
+                    <div class ='gridRadioButtons'>
+                        <span class = 'gridLines'>Yes </span>
+                        <input type="radio" name = 'gridLines' value = '1px solid black' class = 'gridLines' id = 'yes' onclick="getGridLines();" checked="checked">
+                        <label class = 'labelItemLines'  for = 'true'></label>
+                    </div>
+                    <div class ='gridRadioButtons'>
+                        <span class = 'gridLines'>No </span>
+                        <input type="radio" name = 'gridLines' value = 'none' class = 'gridLines' id = 'no' onclick="getGridLines();">
+                        <label class = 'labelItemLines'  for = 'false'></label>
+                    </div>
                 </div>
-                <div class ='gridRadioButtons'>
-                    <span class = 'gridLines'>No </span>
-                    <input type="radio" name = 'gridLines' value = 'none' class = 'gridLines' id = 'no' onclick="getGridLines();">
-                    <label class = 'labelItemLines'  for = 'false'></label>
+                <div id = 'randomColorBox'>
+                    <h3>Random Color Mode</h3>
+                    <div id = 'sliderBox'>
+                        <label class="switch">
+                            <input type="checkbox" id = 'randomColorInput'>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
                 </div>
             </div>
         </div>
